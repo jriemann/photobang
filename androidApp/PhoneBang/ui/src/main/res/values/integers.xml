@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="fade_transition_duration">50</integer>
+    <integer name="slide_transition_duration">100</integer>
+    <integer name="tooltip_show_duration">20</integer>
+</resources>

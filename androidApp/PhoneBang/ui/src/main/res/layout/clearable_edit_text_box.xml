@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_edittext"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/md_spacing"
+            android:paddingLeft="@dimen/md_spacing"
+            android:paddingRight="4dp"
+            />
+
+        <EditText
+            android:id="@+id/clearable_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:textSize="@dimen/md_spacing"
+            android:layout_weight="1"
+            android:paddingLeft= "0dp"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@null"
+            android:background="@android:color/transparent"
+            android:singleLine="true" />
+
+    <ImageButton
+        style="@style/Ui.Icon.Small"
+        android:id="@+id/clearable_button_clear"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:padding="@dimen/icon_padding_lg"
+        android:src="@drawable/ic_x_light" />
+
+</LinearLayout>

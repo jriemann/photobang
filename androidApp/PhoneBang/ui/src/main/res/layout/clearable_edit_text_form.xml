@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="bottom"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/reg_spacing"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="@dimen/md_spacing"
+
+            />
+
+        <EditText
+            android:id="@+id/clearable_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:textSize="@dimen/md_spacing"
+            android:layout_weight="1"
+            android:paddingLeft= "@dimen/sm_spacing"
+
+            android:textCursorDrawable="@null"
+            android:cursorVisible="true"
+
+            android:layout_marginBottom="@dimen/sm_spacing"
+            android:background="@android:color/transparent"
+            android:singleLine="true" />
+
+        <ImageButton
+            style="@style/Ui.Icon.Small"
+            android:id="@+id/clearable_button_clear"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginBottom="@dimen/neg_reg_spacing"
+            android:padding="@dimen/icon_padding_lg"
+            android:src="@drawable/ic_x_light" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey_400"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <declare-styleable name="ClearableEditText">
+        <attr name="hint" format="string" />
+        <attr name="text" format="string" />
+        <attr name="android:inputType" />
+        <attr name="android:lines" />
+        <attr name="style" format="string" />
+
+
+    </declare-styleable>
+    <declare-styleable name="Header">
+        <attr name="header_text" format="string" />
+    </declare-styleable>
+    <declare-styleable name="ActionItem">
+        <attr name="title_text" format="string" />
+        <attr name="value_text" format="string" />
+        <attr name="chevron" format="boolean" />
+    </declare-styleable>
+</resources>

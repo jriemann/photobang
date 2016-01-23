@@ -1,0 +1,115 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name = "Ui.RootContainer">
+        <item name = "android:background">@color/background_off_white</item>
+        <item name = "android:paddingTop">@dimen/container_padding</item>
+        <item name = "android:paddingRight">@dimen/container_padding</item>
+        <item name = "android:paddingLeft">@dimen/container_padding</item>
+
+    </style>
+
+    <style name="Ui.Icon">
+        <item name = "android:background">@color/clear</item>
+    </style>
+    <style name = "Ui.Icon.Small">
+        <item name = "android:padding">@dimen/icon_padding_sm</item>
+    </style>
+
+    <!-- TEXTVIEW -->
+    <style name="Ui.TextView.Header">
+        <item name = "android:textSize">@dimen/font_header</item>
+        <item name = "android:textColor">@color/header_text</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textAllCaps">true</item>
+        <!--<item name = "android:paddingTop">@dimen/md_spacing</item>-->
+        <!--<item name = "android:paddingBottom">@dimen/md_spacing</item>-->
+    </style>
+    <style name="Ui.TextView.Caption">
+        <item name = "android:textSize">@dimen/font_caption</item>
+        <item name = "android:textColor">@color/grey_600</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textAllCaps">true</item>
+        <!--<item name = "android:paddingTop">@dimen/md_spacing</item>-->
+        <!--<item name = "android:paddingBottom">@dimen/md_spacing</item>-->
+    </style>
+    <style name = "Ui.TextView.Header.Dark">
+        <item name = "android:textColor">@color/grey_600</item>
+    </style>
+    <style name="Ui.TextView.Display">
+        <item name = "android:paddingTop">@dimen/sm_spacing</item>
+        <item name = "android:paddingBottom">@dimen/sm_spacing</item>
+        <item name = "android:textSize">@dimen/font_display2</item>
+        <item name = "android:gravity">center</item>
+
+        <item name = "android:textColor">@color/body_text</item>
+    </style>
+    <style name="Ui.TextView.Display.Sub">
+        <item name = "android:textAllCaps">true</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textSize">@dimen/font_display1</item>
+    </style>
+    <style name="Ui.TextView.Body">
+        <item name = "android:textSize">@dimen/font_body</item>
+        <item name = "android:textColor">@color/body_text</item>
+    </style>
+    <style name="Ui.TextView.Label.Power">
+        <item name = "android:textStyle">bold</item>
+
+    </style>
+    <style name="Ui.TextView.Header.Lower">
+        <item name = "android:textAllCaps">false</item>
+        <item name = "android:textColor">@color/header_text</item>
+    </style>
+    <style name="Ui.TextView.Header.ColorPrimary">
+
+        <item name = "android:textColor">@color/color_primary_dark</item>
+    </style>
+    <style name="Ui.TextView.Header.Thin">
+        <item name = "android:textAllCaps">false</item>
+        <item name = "android:textStyle">normal</item>
+    </style>
+    <style name="Ui.TextView.Label">
+        <item name = "android:textSize">@dimen/font_label</item>
+        <item name = "android:textColor">@color/body_text</item>
+
+    </style>
+    <style name="Ui.TextView.ValueLabel">
+        <item name = "android:textSize">@dimen/font_label</item>
+        <item name = "android:textColor">@color/header_text</item>
+
+    </style>
+    <style name = "Ui.EditText" parent="Widget.AppCompat.EditText">
+        <item name = "android:drawableBottom">@drawable/edittext_underline</item>
+        <item name = "android:textAppearance">@style/Ui.TextView</item>
+    </style>
+    
+    <!-- Button -->
+    <style name = "Ui.Button">
+        <item name = "android:textAppearance">@style/Ui.TextView.Label</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:paddingTop">16dp</item>
+        <item name = "android:paddingBottom">16dp</item>
+        <item name = "android:paddingLeft">24dp</item>
+        <item name = "android:paddingRight">24dp</item>
+        <item name = "android:background">@drawable/bg_light_grey_button_borderless</item>
+        <item name = "android:textAllCaps">false</item>
+        <item name = "android:gravity">center</item>
+    </style>
+    <style name = "Ui.Button.Primary">
+        <item name = "android:background">@drawable/bg_primary_button_round</item>
+        <item name = "android:textColor">@color/text_primary_button</item>
+    </style>
+    <style name = "Ui.Button.LightGrey">
+        <item name = "android:background">@drawable/bg_light_grey_button_square</item>
+        <item name = "android:textColor">@color/body_text</item>
+    </style>
+    <style name = "Ui.Button.Grey">
+        <item name = "android:background">@drawable/bg_grey_button_round</item>
+        <item name = "android:textColor">@color/text_grey_button</item>
+    </style>
+    <style name = "Ui.Button.Accent">
+        <item name = "android:background">@drawable/bg_accent_button_square</item>
+        <item name = "android:textColor">@color/text_accent_button</item>
+    </style>
+</resources>

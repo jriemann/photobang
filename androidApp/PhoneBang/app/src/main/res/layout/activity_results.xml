@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_grey_dark">
+    <jp.co.recruit_mp.android.widget.HeaderFooterGridView
+        android:id="@+id/results_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        />
+    <com.scopely.fontain.views.FontButton
+        android:id="@+id/home_find_bad_photos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="FIND BAD PHOTOS"
+        app:font_family="@string/proxima_nova"
+        app:font_weight="SEMI_BOLD"
+        style="@style/Ui.Button.Primary"/>
+
+</RelativeLayout>

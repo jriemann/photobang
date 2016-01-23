@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Ui" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="android:textViewStyle">@style/Ui.TextView</item>
+        <item name="android:buttonStyle">@style/Ui.Button</item>
+        <item name="android:imageButtonStyle">@style/Ui.Button</item>
+        <item name="android:popupWindowStyle">@style/Ui.PopupWindow</item>
+        <item name="android:popupMenuStyle">@style/Ui.PopupMenu</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name = "android:radioButtonStyle">@style/Ui.RadioButton</item>
+        <item name = "android:editTextStyle">@style/Ui.EditText</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Ui.Secondary">
+
+        <item name="colorPrimary">@color/color_secondary</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorPrimaryDark">@color/grey_900</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Ui.Menu">
+        <item name="colorPrimaryDark">@color/grey_700</item>
+    </style>
+    <style name="Ui.TextView">
+        <item name="android:textSize">16dp</item>
+        <item name = "android:textColor">@color/body_text</item>
+    </style>
+    <style name="Ui.PopupWindow" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:background">@drawable/popup_background</item>
+
+    </style>
+    <style name="Ui.PopupMenu" parent="Widget.AppCompat.Light.PopupMenu">
+        <item name="android:background">@drawable/popup_background</item>
+    </style>
+    <style name = "Ui.Modal"  parent="Theme.AppCompat.Light.Dialog" >
+        <!-- parent="Theme.AppCompat.Dialog" -->
+        <item name = "android:background">@android:color/transparent</item>
+        <item name="colorPrimary">@color/color_grey</item>
+        <item name="android:windowBackground">@drawable/popup_background</item>
+        <item name="colorPrimaryDark">@color/color_grey</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorControlNormal">@color/body_text</item>
+        <item name="colorControlActivated">@color/body_text</item>
+        <item name="colorControlHighlight">@color/color_accent</item>-
+        <item name="actionMenuTextAppearance">@style/Ui.ModalActionBarTextAppearance</item>
+        <item name="android:actionMenuTextAppearance">@style/Ui.ModalActionBarTextAppearance</item>
+        <item name="android:windowAnimationStyle">@style/Ui.Window.Animation</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="toolbarNavigationButtonStyle">@style/Ui.ToolbarNavigationButtonStyle</item>
+
+        <item name = "android:textColor">@color/body_text</item>
+    </style>
+    <style name = "Ui.ToolbarNavigationButtonStyle">
+        <item name = "android:padding">16dp</item>
+    </style>
+    <style name = "Ui.Dialog"  parent="Ui.Modal" >
+        <item name="android:windowAnimationStyle">@style/Ui.Window.Animation</item>
+    </style>
+    <style name="Ui.Window.Animation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+    <style name="Ui.Dialog.Animation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/fade_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/fade_out_bottom</item>
+    </style>
+    <style name="Ui.ModalActionBarTextAppearance">
+        <item name="android:padding">@dimen/md_spacing</item>
+    </style>
+
+    <style name="Ui.Toolbar">
+        <item name = "android:textColorPrimary">@color/body_text</item>
+        <item name="android:actionMenuTextColor">@color/color_primary_light</item>
+    </style>
+    <style name="Ui.Toolbar.Primary">
+        <item name="android:background">@color/color_primary</item>
+        <item name = "android:textColorPrimary">@color/white</item>
+
+    </style>
+    <style name="Ui.Toolbar.Popup">
+        <item name="android:background">@color/color_grey</item>
+    </style>
+
+    <style name = "Ui.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+
+    </style>
+</resources>
