@@ -1,1 +1,17 @@
-Get started
+Frontend (David):
+- ???
+- Make it nice and stuff
+
+
+Image processing (Jesse and Shrey))
+- Figure out api/library for image recognition stuff.
+   - Check out 'Bytedeco' library
+- Figure out how to image detection 
+- Image manipulation (cropping, deleting etc...)
+
+
+Also:
+- Research what makes a good/bad photo -> how to avoid?
+- Better name?
+
+
