@@ -25,6 +25,11 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:noHistory="true">
         </activity>
+        <activity
+            android:name=".frontend.processingscreen.activities.ProcessingActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:noHistory="true">
+        </activity>
     </application>
 
 </manifest>
