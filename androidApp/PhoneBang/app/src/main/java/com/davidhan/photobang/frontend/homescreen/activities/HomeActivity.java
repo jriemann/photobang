@@ -8,17 +8,12 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import com.davidhan.photobang.R;
+import com.davidhan.photobang.backend.io.Const;
 import com.davidhan.photobang.frontend.homescreen.HomeViewPagerAdapter;
 import com.davidhan.photobang.frontend.processingscreen.activities.ProcessingActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import android.util.Log;
-
-
-import org.opencv.android.BaseLoaderCallback;
-import org.opencv.android.LoaderCallbackInterface;
-import org.opencv.android.OpenCVLoader;
 
 
 /**
@@ -35,6 +30,9 @@ public class HomeActivity extends Activity {
     @Bind(R.id.home_viewpager)
     ViewPager mViewPager;
     FragmentPagerAdapter mFragmentPager;
+    private boolean screenshot = false;
+    private boolean screenshots;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +76,15 @@ public class HomeActivity extends Activity {
 //        {
 //            Log.e(TAG, "Cannot connect to OpenCV Manager");
 //        }
-        startActivity(new Intent(this,ProcessingActivity.class));
+        Intent i = new Intent(this, ProcessingActivity.class);
+        i.putExtra(Const.SCREENSHOT,isScreenshots());
+        startActivity(i);
+    }
+    public void toggleScreenshot(boolean enabled){
+        this.screenshot = enabled;
+    }
+
+    public boolean isScreenshots() {
+        return screenshots;
     }
 }

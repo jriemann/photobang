@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.davidhan.photobang.R;
@@ -28,6 +29,8 @@ public class DoneActivity extends Activity {
     TextView mText;
     @Bind(R.id.home_find_bad_photos)
     Button mButton;
+    @Bind (R.id.final_onboarding_screnshots)
+    LinearLayout mScreenshotToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +45,7 @@ public class DoneActivity extends Activity {
                goHome();
             }
         });
-
+        mScreenshotToggle.setVisibility(View.GONE);
     }
 
     @Override

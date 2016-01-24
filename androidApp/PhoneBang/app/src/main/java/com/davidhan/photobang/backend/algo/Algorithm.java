@@ -1,11 +1,13 @@
 package com.davidhan.photobang.backend.algo;
 
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.ThumbnailUtils;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import com.davidhan.photobang.backend.base.PhotoObject;
+import com.davidhan.photobang.backend.callbacks.OnAlgoProgress;
 
 import org.opencv.android.Utils;
 import org.opencv.core.CvType;
@@ -13,8 +15,6 @@ import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 import static org.opencv.core.Core.convertScaleAbs;
@@ -28,17 +28,25 @@ public class Algorithm {
     public Mat imgMAT;
    public Mat greyMAT;
 
-    public static ArrayList<File> getBadPhotos(ArrayList<File> all_files, boolean detectScreenshots) {
-        ArrayList<File> bad_files = new ArrayList<File>();
-        for (File file :all_files)
-        {
-            if(isBlurry(file) || (detectScreenshots && isScreenshot(file))) {
-                bad_files.add(file);
-                Log.i(TAG, file + " is blurry or a screenshot");
+    public static void getBadPhotos(final ArrayList<File> all_files, final OnAlgoProgress onAlgoProgress, final boolean detectScreenshots) {
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                ArrayList<File> bad_files = new ArrayList<File>();
+                int count = 0;
+                for (File file : all_files) {
+                    count++;
+                    if (isBlurry(file) || (detectScreenshots && isScreenshot(file))) {
+                        bad_files.add(file);
+                        onAlgoProgress.onAlgoUpdated(count, "BAD");
+                    } else {
+                        onAlgoProgress.onAlgoUpdated(count, "GOOD");
+                    }
+                }
+                onAlgoProgress.onAlgoFinished(bad_files);
             }
-        }
+        });
 
-        return bad_files;
     }
 
     public static int deletePhotos(ArrayList<PhotoObject> photos) {
@@ -95,14 +103,34 @@ public class Algorithm {
         Log.i(TAG, filename + "is a screenshot: " + slice.equals("SCREENSHOT") + ". Slice is: " + slice);
         return (slice.equals("SCREENSHOT"));
     }
+    public static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
 
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) > reqHeight
+                    && (halfWidth / inSampleSize) > reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
+    }
 
     public static boolean isBlurry(File file) {
         //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-
+//
         Bitmap bitmap = BitmapFactory.decodeFile(file.getPath());
-        Log.i(TAG, "Got the bitmap");
-
+        ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(file.getPath()), 2000, 2000);
         Mat imgMAT = new Mat(bitmap.getWidth(), bitmap.getHeight(), CvType.CV_8UC1);
         //imgMAT = new Mat();
 
@@ -191,12 +219,11 @@ public class Algorithm {
         //Log.i(TAG, "WHAAAT: " + (maxLap < soglia) );
         //Log.i(TAG, "maxLap: " + maxLap);
         if (maxLap < soglia || maxLap == soglia) {
-            Log.i(TAG, "blur image");
+
             return true;
         }
         else
         {
-            Log.i(TAG, "image good");
             return false;
         }
 

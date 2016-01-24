@@ -10,6 +10,7 @@ import java.util.ArrayList;
  * author: david
  * Copyright (c) 2016 David Han
  **/
-public abstract class OnAlgoFinished {
+public abstract class OnAlgoProgress {
     abstract public void onAlgoFinished(ArrayList<File> output);
+    abstract public void onAlgoUpdated(int index,String status);
 }

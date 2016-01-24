@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.davidhan.photobang.R;
 import com.davidhan.photobang.frontend.homescreen.activities.HomeActivity;
@@ -27,8 +28,10 @@ public class FinalOnBoardingSlideFragment extends Fragment {
     ImageView mImage;
     @Bind(R.id.home_find_bad_photos)
     Button mButton;
-
+    @Bind (R.id.final_onboarding_screnshots)
+    LinearLayout mScreenshotToggle;
     ViewGroup mRootView;
+    boolean screenshots = false;
 
     public void setPosition(int position) {
         this.position = position;
@@ -54,7 +57,16 @@ public class FinalOnBoardingSlideFragment extends Fragment {
                 ((HomeActivity) getActivity()).launchFindAlgorithm();
             }
         });
+        ((HomeActivity) getActivity()).toggleScreenshot(false);
+        mScreenshotToggle.setSelected(false);
+        mScreenshotToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mScreenshotToggle.setSelected(!((HomeActivity) getActivity()).isScreenshots());
+                ((HomeActivity) getActivity()).toggleScreenshot(!((HomeActivity) getActivity()).isScreenshots());
 
+            }
+        });
     }
 
 

@@ -1,2 +1,1 @@
-include ':app',':ui'
-include ':openCVLibrary3100'
+include ':openCVLibrary3100', ':app', ':ui'

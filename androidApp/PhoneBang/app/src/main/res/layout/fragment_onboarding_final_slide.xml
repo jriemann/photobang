@@ -40,5 +40,32 @@
         android:layout_marginTop="@dimen/lg_spacing"
         app:font_family="@string/proxima_nova"
         app:font_weight="SEMI_BOLD" />
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/final_onboarding_screnshots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/reg_spacing"
+        android:padding="@dimen/reg_spacing"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:duplicateParentState="true"
 
+            android:gravity="center"
+            android:src="@drawable/toggle_button_grey"/>
+        <com.scopely.fontain.views.FontTextView
+            android:id="@+id/results_select_all_text"
+            style="@style/Ui.TextView.Header.Thin"
+            android:textColor="@color/color_grey_light"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            app:font_weight="SEMI_BOLD"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/reg_spacing"
+            android:text="Include Screenshots"/>
+    </LinearLayout>
 </LinearLayout>
