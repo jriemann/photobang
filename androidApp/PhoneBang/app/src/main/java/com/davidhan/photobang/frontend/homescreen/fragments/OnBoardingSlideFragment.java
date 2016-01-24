@@ -62,7 +62,7 @@ public class OnBoardingSlideFragment extends Fragment {
                 mImage.setImageResource(R.drawable.pic_photos_in_sd);
                 break;
             case 1:
-                mText.setText("Photobang will excavate all of the bad photos on your phone...");
+                mText.setText("Prune will fetch you all of the bad photos on your phone...");
                 mImage.setImageResource(R.drawable.pic_science);
                 break;
             case 2:
