@@ -65,8 +65,10 @@
         <item name="android:windowAnimationStyle">@style/Ui.Window.Animation</item>
     </style>
     <style name="Ui.Window.Animation" parent="@android:style/Animation.Activity">
-        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
-        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+        <!--<item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>-->
+        <item name="android:windowEnterAnimation">@anim/fade_in_bottom</item>
+        <!--<item name="android:windowExitAnimation">@anim/slide_out_bottom</item>-->
+        <item name="android:windowExitAnimation">@anim/fade_out_bottom</item>
     </style>
     <style name="Ui.Dialog.Animation" parent="@android:style/Animation.Activity">
         <item name="android:windowEnterAnimation">@anim/fade_in_bottom</item>

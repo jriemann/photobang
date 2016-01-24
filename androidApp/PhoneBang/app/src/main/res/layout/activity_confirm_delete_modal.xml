@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/grey_800"
+    android:gravity="center"
+    android:padding="@dimen/container_padding"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        android:layout_marginTop="@dimen/lg_spacing"
+        android:layout_marginBottom="@dimen/md_spacing"
+        android:src="@drawable/pic_trash" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/md_spacing"
+        android:orientation="horizontal">
+
+
+
+        <!-- ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pic_trash" />-->
+        <com.scopely.fontain.views.FontTextView
+            android:id="@+id/confirm_delete_text"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/reg_spacing"
+            android:text="Are you sure you want to delete 0 items?"
+            android:textColor="@color/color_accent_text"
+            app:font_weight="SEMI_BOLD" />
+
+    </LinearLayout>
+    <com.scopely.fontain.views.FontButton
+        android:id="@+id/confirm_delete_cancel"
+        android:text="Cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xl_spacing"
+        android:background="@drawable/bg_white_button_round"
+        android:layout_marginLeft="@dimen/lg_spacing"
+        android:layout_marginRight="@dimen/lg_spacing"
+        style="@style/Ui.Button"/>
+    <com.scopely.fontain.views.FontButton
+        android:id="@+id/confirm_delete_confirm"
+        android:text="Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/reg_spacing"
+        android:layout_marginLeft="@dimen/lg_spacing"
+        android:layout_marginRight="@dimen/lg_spacing"
+
+        android:layout_marginBottom="@dimen/reg_spacing"
+        style="@style/Ui.Button.Primary"/>
+    <!--<LinearLayout-->
+        <!--android:id="@+id/preview_mark_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="-48dp"-->
+        <!--android:background="@drawable/bg_grey_button_round"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingBottom="@dimen/icon_padding_lg"-->
+        <!--android:paddingLeft="16dp"-->
+        <!--android:paddingRight="16dp"-->
+        <!--android:paddingTop="@dimen/icon_padding_lg">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/preview_mark_check"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_check_white_deselected" />-->
+
+        <!--<com.scopely.fontain.views.FontTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="@dimen/sm_spacing"-->
+            <!--android:text="Mark for Deletion"-->
+            <!--android:textColor="@color/color_accent_text"-->
+            <!--app:font_weight="SEMI_BOLD" />-->
+    <!--</LinearLayout>-->
+</LinearLayout>

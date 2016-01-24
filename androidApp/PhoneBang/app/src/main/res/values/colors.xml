@@ -6,13 +6,15 @@
     <color name="color_primary_light">#F8BBD0</color>
     <color name="color_primary_text">#F8BBD0</color>
     <color name="color_primary_text_disabled">#FF4081</color>
-    <color name = "color_accent">#FFEB3B</color>
-    <color name = "color_accent_pressed">#fdd835</color>
-    <color name = "color_accent_dark">#fbc02d</color>
-    <color name = "color_accent_light">#fff9c4</color>
-    <color name = "color_accent_text">#f57f17</color>
+    <color name = "color_accent">@color/grey_100</color>
+    <color name = "color_accent_pressed">@color/grey_200</color>
+    <color name = "color_accent_dark">@color/grey_300</color>
+    <color name = "color_accent_light">@color/grey_50</color>
+    <color name = "color_accent_text">@color/grey_100</color>
     <color name = "color_accent_text_disabled">@color/color_accent_dark</color>
     <color name="color_secondary">@color/color_grey</color>
+    <color name = "color_grey_ultralight">#728497</color>
+    <color name = "color_grey_light">#3d4752</color>
     <color name = "color_grey">#374554</color>
     <color name = "color_grey_dark">#2d3742</color>
 
