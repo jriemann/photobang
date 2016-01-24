@@ -20,4 +20,10 @@ public class AnimUtils {
     public static Animation getScaleSpringUp(Context context){
         return AnimationUtils.loadAnimation(context, R.anim.scale_spring_up);
     }
+    public static Animation getSpinClockWise(Context context){
+        return AnimationUtils.loadAnimation(context, R.anim.spin_clockwise);
+    }
+    public static Animation getSpinConterClockwise(Context context){
+        return AnimationUtils.loadAnimation(context, R.anim.spin_counter_clockwise);
+    }
 }

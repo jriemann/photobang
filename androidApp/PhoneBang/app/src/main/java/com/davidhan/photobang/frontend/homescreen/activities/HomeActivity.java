@@ -37,7 +37,7 @@ public class HomeActivity extends Activity {
 
         mFragmentPager = new HomeViewPagerAdapter(getFragmentManager());
         mViewPager.setAdapter(mFragmentPager);
-        launchFindAlgorithm();
+       // launchFindAlgorithm();
 
     }
     private View.OnClickListener onClick = new View.OnClickListener(){

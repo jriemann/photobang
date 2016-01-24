@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="Find my Bad Photos"
+        android:elevation="4dp"
         android:layout_marginTop="@dimen/lg_spacing"
         app:font_family="@string/proxima_nova"
         app:font_weight="SEMI_BOLD" />

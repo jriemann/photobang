@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/container_padding"
     android:background="@color/color_grey_dark">
-  <com.scopely.fontain.views.FontTextView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:text="processing"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/xxl_spacing"
+        android:padding="@dimen/container_padding">
 
+        <ImageView
+            android:id="@+id/processing_gear_1"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_marginLeft="48dp"
+            android:src="@drawable/pic_cog_red" />
+        <ImageView
+            android:id="@+id/processing_gear_2"
+            android:layout_width="wrap_content"
+            android:layout_height="144dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="@dimen/lg_spacing"
+            android:layout_marginTop="-24dp"
+            android:src="@drawable/pic_cog_orange" />
+        <com.scopely.fontain.views.FontTextView
+            android:id="@+id/processing_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="48dp"
+            android:paddingLeft="@dimen/reg_spacing"
+            android:text="Processing..."
+            android:textColor="@color/color_accent_text"
+            android:textSize="@dimen/font_display1"
+            app:font_weight="SEMI_BOLD" />
+
+    </LinearLayout>
+
+    <com.scopely.fontain.views.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/reg_spacing"
+        android:layout_centerInParent="true"
+        android:text="Please do not close the app."
+        android:textColor="@color/color_grey_ultralight"
+        android:textSize="@dimen/font_body"
+        />
 </RelativeLayout>
