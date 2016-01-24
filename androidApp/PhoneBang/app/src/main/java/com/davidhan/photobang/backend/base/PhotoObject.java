@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.media.ThumbnailUtils;
 
 import java.io.File;
+import java.util.UUID;
 
 /**
  * name: PhotoObject
@@ -18,12 +19,21 @@ public class PhotoObject {
     /**
      * Path of the file
      */
+    private String uid;
     private File file;
     private boolean selected;
     private Bitmap thumbnail;
     private Bitmap fullImage;
     public PhotoObject(File file){
+        uid = UUID.randomUUID().toString();
         this.file = file;
+//        Runnable runnable = new Runnable() {
+//            @Override
+//            public void run() {
+//                getThumbnail();
+//            }
+//        };
+//        new Thread(runnable).start();
     }
 
     public boolean isSelected() {
@@ -40,7 +50,7 @@ public class PhotoObject {
 
     public Bitmap getThumbnail() {
         if(thumbnail == null){
-            thumbnail = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(file.getPath()), 128, 128);
+            thumbnail = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(file.getPath()), 144, 144);
         }
         return thumbnail;
     }
@@ -50,5 +60,9 @@ public class PhotoObject {
             fullImage = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(file.getPath()), 1080 , 1920);
         }
         return fullImage;
+    }
+
+    public String getUID() {
+        return uid;
     }
 }

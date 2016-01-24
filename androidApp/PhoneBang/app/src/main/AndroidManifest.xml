@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.davidhan.photobang">
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
         android:name=".PhotoBang"
         android:allowBackup="true"
@@ -12,8 +13,7 @@
         tools:replace="android:theme,android:icon">
         <activity
             android:name=".frontend.homescreen.activities.HomeActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:noHistory="true">
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,14 +22,25 @@
         </activity>
         <activity
             android:name=".frontend.resultscreen.activities.ResultsActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:noHistory="true">
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         </activity>
         <activity
             android:name=".frontend.processingscreen.activities.ProcessingActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:noHistory="true">
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         </activity>
+        <activity
+            android:name=".frontend.resultscreen.activities.PreviewModal"
+            android:theme="@style/Ui.Modal">
+        </activity>
+        <activity
+            android:name=".frontend.resultscreen.activities.ConfirmDeleteModal"
+            android:theme="@style/Ui.Modal">
+        </activity>
+        <activity
+            android:name=".frontend.donescreen.activities.DoneActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        </activity>
+
     </application>
 
 </manifest>

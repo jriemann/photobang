@@ -5,16 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_grey_dark">
-    <jp.co.recruit_mp.android.widget.HeaderFooterGridView
-        android:id="@+id/results_gridview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="3"
-        android:verticalSpacing="0dp"
-        android:horizontalSpacing="0dp"
-        android:stretchMode="columnWidth"
-        android:gravity="center"
-        />
+  <com.scopely.fontain.views.FontTextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="processing"/>
 
 
 </RelativeLayout>
