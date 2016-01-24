@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/PhoneBang.iml" filepath="$PROJECT_DIR$/PhoneBang.iml" />
       <module fileurl="file://$PROJECT_DIR$/PhoneBang.iml" filepath="$PROJECT_DIR$/PhoneBang.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary3100/openCVLibrary3100.iml" filepath="$PROJECT_DIR$/openCVLibrary3100/openCVLibrary3100.iml" />
       <module fileurl="file://$PROJECT_DIR$/ui/ui.iml" filepath="$PROJECT_DIR$/ui/ui.iml" />
     </modules>
   </component>

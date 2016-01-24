@@ -27,4 +27,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.scopely:fontain:1.0.0'
     compile 'in.srain.cube:grid-view-with-header-footer:1.0.12'
+    compile project(':openCVLibrary3100')
 }
