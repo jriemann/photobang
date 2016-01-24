@@ -14,12 +14,15 @@ import com.scopely.fontain.Fontain;
 public class PhotoBang extends Application {
 
 
+    private static final String TAG = "PhotoBang APPLICATION";
+
     @Override
     public void onCreate() {
         super.onCreate();
         Fontain.init(this,"fonts","ProximaNova");
 
     }
+
 
 
 }

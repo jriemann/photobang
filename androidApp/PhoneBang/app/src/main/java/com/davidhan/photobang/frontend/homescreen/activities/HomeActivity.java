@@ -13,6 +13,13 @@ import com.davidhan.photobang.frontend.processingscreen.activities.ProcessingAct
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import android.util.Log;
+
+
+import org.opencv.android.BaseLoaderCallback;
+import org.opencv.android.LoaderCallbackInterface;
+import org.opencv.android.OpenCVLoader;
+
 
 /**
  * name: HomeActivity
@@ -22,6 +29,9 @@ import butterknife.ButterKnife;
  * Copyright (c) 2016 David Han
  **/
 public class HomeActivity extends Activity {
+    private final static String TAG = "Home";
+    //Mat m;
+
     @Bind(R.id.home_viewpager)
     ViewPager mViewPager;
     FragmentPagerAdapter mFragmentPager;
@@ -32,6 +42,19 @@ public class HomeActivity extends Activity {
         ButterKnife.bind(this);
         initViews();
     }
+//
+//    @Override
+//    protected void onResume()
+//    {
+//        Log.i(TAG, "Called onResume");
+//        super.onResume();
+//
+//        Log.i(TAG, "Trying to load OpenCV library");
+////        if (!OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_6, this, mOpenCVCallBack))
+////        {
+////            Log.e(TAG, "Cannot connect to OpenCV Manager");
+////        }
+//    }
 
     private void initViews() {
 
@@ -51,6 +74,10 @@ public class HomeActivity extends Activity {
         mViewPager.setCurrentItem(mViewPager.getCurrentItem()+1,true);
     }
     public void launchFindAlgorithm() {
+//        if (!OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_1_0, this, mOpenCVCallBack))
+//        {
+//            Log.e(TAG, "Cannot connect to OpenCV Manager");
+//        }
         startActivity(new Intent(this,ProcessingActivity.class));
     }
 }
